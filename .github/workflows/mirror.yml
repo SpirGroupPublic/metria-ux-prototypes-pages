@@ -1,0 +1,20 @@
+name: Mirror to SpirGroupPublic
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to SpirGroupPublic
+        run: |
+          git remote add public https://x-access-token:${{ secrets.SPIRGROUP_PAT }}@github.com/SpirGroupPublic/metria-ux-prototypes-pages.git
+          git push public main
