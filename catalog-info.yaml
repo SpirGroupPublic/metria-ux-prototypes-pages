@@ -14,4 +14,3 @@ spec:
   type: website
   lifecycle: experimental
   owner: group:default/ux
-  system: ux-prototypes
