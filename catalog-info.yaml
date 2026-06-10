@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ux-prototypes-pages
+  namespace: metria
+  title: UX Prototypes
+  description: Static GitHub Pages site hosting Metria UX prototype pages.
+  annotations:
+    github.com/project-slug: MetriaAB/ux-prototypes-pages
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - metria
+spec:
+  type: website
+  lifecycle: experimental
+  owner: group:default/ux
+  system: ux-prototypes
